@@ -13,7 +13,7 @@ public class Teacher extends Person {
     }
 
     public Teacher(String firstName, String middleName, String lastName, String schoolName, String uniqueID, String telephone, PersonAddress address, boolean isTenured, Date hireDate) {
-        super(firstName, middleName, lastName, schoolName, uniqueID, telephone, address);
+        super(firstName, middleName, lastName, uniqueID, telephone, address);
         this.isTenured = isTenured;
         this.hireDate = hireDate;
     }

@@ -5,7 +5,7 @@ public class Person {
     private String firstName;
     private String middleName = null;
     private String lastName;
-    private String schoolName;
+    private String schoolName = null;
     private String uniqueID;
     private String telephone;
     private PersonAddress address;      //address of address type
@@ -17,28 +17,19 @@ public class Person {
         Constructors
      */
     //Name input construct
-    public Person(String firstName, String middleName, String lastName, String schoolName, String uniqueID, String telephone, PersonAddress address) {
+    public Person(String firstName, String middleName, String lastName, String uniqueID, String telephone, PersonAddress address) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
-        this.schoolName = schoolName;
         this.uniqueID = uniqueID;
         this.telephone = telephone;
         this.address = address;
     }
 
-    public Person(String firstName, String lastName, String schoolName, String uniqueID, String telephone, PersonAddress address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.schoolName = schoolName;
-        this.uniqueID = uniqueID;
-        this.telephone = telephone;
-        this.address = address;
-    }
 
     //default no-arg constructor
     public Person() {
-        this("",null,"","","","",new PersonAddress());
+        this("",null,"","","",new PersonAddress());
     }
 
 

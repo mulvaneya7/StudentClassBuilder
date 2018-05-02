@@ -15,7 +15,7 @@ public class Student extends Person implements GenerateRandomSchedule{
     }
 
     public Student(String firstName, String middleName, String lastName, String schoolName, String uniqueID, String telephone, PersonAddress address, Date dateOfBirth, Date startDate, double gpa) {
-        super(firstName, middleName, lastName, schoolName, uniqueID, telephone, address);
+        super(firstName, middleName, lastName, uniqueID, telephone, address);
         this.dateOfBirth = dateOfBirth;
         this.startDate = startDate;
         this.gpa = gpa;

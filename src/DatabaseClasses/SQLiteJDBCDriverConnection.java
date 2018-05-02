@@ -9,10 +9,11 @@ import java.sql.SQLException;
  * @author sqlitetutorial.net
  */
 public class SQLiteJDBCDriverConnection {
+//    private static Connection conn = null;
     /**
      * Connect to a sample database
      */
-    public static void connect() {
+    public static Connection connect() {
         Connection conn = null;
         try {
             // db parameters
@@ -21,7 +22,6 @@ public class SQLiteJDBCDriverConnection {
             conn = DriverManager.getConnection(url);
 
             System.out.println("Connection to SQLite has been established.");
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -33,5 +33,10 @@ public class SQLiteJDBCDriverConnection {
                 System.out.println(ex.getMessage());
             }
         }
+        return conn;
     }
+
+//    public static Connection getConn() {
+//        return conn;
+//    }
 }

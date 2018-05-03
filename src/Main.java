@@ -10,44 +10,38 @@ public class Main
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Connection conn = connect();
-//        Connection conn = getConn();
+        Connection conn = connect(); //connect to the database
 
-//        Connection c = null;
-//        Statement stmt = null;
-//        try
-//        {
-//            Class.forName("org.sqlite.JDBC");
-//            c = DriverManager.getConnection("jdbc:sqlite:C:/Users/ronen/Desktop/Github/StudentClassBuilder/src/DatabaseClasses/StudentInfo.db");
-//            c.setAutoCommit(false);
-//            System.out.println("Opened database successfully");
-//            stmt = c.createStatement();
-//            ResultSet rs = stmt.executeQuery("SELECT * FROM StudentInfo");
+        Statement stmt = null;
+        try
+        {
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM StudentInfo");
+
+            while(rs.next())
+            {
+                String firstName = rs.getString("FirstName");
+
+                System.out.println("FirstName = " + firstName);
+            }
+        }
+        catch(Exception e)
+        {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+
+
+//        Person john = new Person("John", null , "Doe", "12256", "949-555-9090",
+//                new PersonAddress("123 Maple","RSM","California", "92688"));
 //
-//            while(rs.next())
-//            {
-//                String firstName = rs.getString("FirstName");
+//        Student studentJohn = new Student("John", "Malerd" , "Doe", "12256", "949-555-9090",
+//                new PersonAddress("123 Maple","RSM","California", "92688"),
+//                new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
 //
-//                System.out.println("FirstName = " + firstName);
-//            }
-//        }
-//        catch(Exception e)
-//        {
-//            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-//            System.exit(0);
-//        }
-
-
-        Person john = new Person("John", null , "Doe", "12256", "949-555-9090",
-                new PersonAddress("123 Maple","RSM","California", "92688"));
-
-        Student studentJohn = new Student("John", "Malerd" , "Doe", "12256", "949-555-9090",
-                new PersonAddress("123 Maple","RSM","California", "92688"),
-                new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
-
-        System.out.println(john.toString());
-        System.out.println();
-        System.out.println(studentJohn.toString());
+//        System.out.println(john.toString());
+//        System.out.println();
+//        System.out.println(studentJohn.toString());
 
 
         //CLASS TEXT FILE GENERATOR
@@ -69,10 +63,10 @@ public class Main
             System.out.println(ex);
         }
         */
-        File courseMockup = new File("src/CourseMockup.txt");
-        University UCLA = new University("UCLA",courseMockup);
-        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
-        UCLA.printAvailableCourses();
-        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
+//        File courseMockup = new File("src/CourseMockup.txt");
+//        University UCLA = new University("UCLA",courseMockup);
+//        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
+//        UCLA.printAvailableCourses();
+//        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
     }
 }

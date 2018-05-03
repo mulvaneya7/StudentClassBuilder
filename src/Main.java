@@ -70,7 +70,9 @@ public class Main
         }
         */
         File courseMockup = new File("src/CourseMockup.txt");
-        University UCLA = new University(courseMockup);
-        UCLA.getClassList().toString();
+        University UCLA = new University("UCLA",courseMockup);
+        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
+        UCLA.printAvailableCourses();
+        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
     }
 }

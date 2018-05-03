@@ -8,24 +8,26 @@ import java.util.*;
  */
 public class University implements GenerateRandomSchedule{
     //Data Fields
+    String universityName;
     ArrayList<Student> studentList;
     ArrayList<Teacher> teacherList;
     ArrayList<Class>   classList;
 
-    public University(ArrayList<Student> studentList, ArrayList<Teacher> teacherList, ArrayList<Class> classList) {
+    public University(String uniName, ArrayList<Student> studentList, ArrayList<Teacher> teacherList, ArrayList<Class> classList) {
+        this.universityName = uniName;
         this.studentList = studentList;
         this.teacherList = teacherList;
         this.classList = classList;
     }
 
     //default no-arg constructor
-    public University() {
-        this(new ArrayList<Student>(),new ArrayList<Teacher>(), new ArrayList<Class>());
+    public University(String uniName) {
+        this(uniName, new ArrayList<Student>(),new ArrayList<Teacher>(), new ArrayList<Class>());
     }
 
     //load the University Class list on Construction
-    public University(File Courses) {
-        this();
+    public University(String uniName, File Courses) {
+        this(uniName);
         loadClasses(Courses);
     }
 
@@ -43,6 +45,15 @@ public class University implements GenerateRandomSchedule{
             }
         }catch(Exception ex) {
             System.out.println(ex);
+        }
+    }
+
+
+    //Print Functions
+    public void printAvailableCourses() {
+        for(int i = 0; i < classList.size(); i++) {
+            System.out.println(classList.get(i).toString());
+            System.out.println();
         }
     }
 
@@ -71,5 +82,13 @@ public class University implements GenerateRandomSchedule{
 
     public void setClassList(ArrayList<Class> classList) {
         this.classList = classList;
+    }
+
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public void setUniversityName(String universityName) {
+        this.universityName = universityName;
     }
 }

@@ -15,7 +15,7 @@ public class Class {
         Constructors
      */
     //Best Constructor
-    public Class(String classCode, String department, String description, int maxStudents) {
+    public Class(String department, String classCode, String description, int maxStudents) {
         this.classCode = classCode;
         this.department = department;
         this.description = description;
@@ -26,9 +26,18 @@ public class Class {
         this(null,null,"",0);
     }
 
+    //overriding methods
+
+    @Override
+    public String toString() {
+        return
+                "Class: " + department + classCode + "\n" +
+                "about: " + description;
+    }
+
     /*
-    | Getters and Setters
-     */
+        | Getters and Setters
+         */
     public String getClassCode() {
         return classCode;
     }

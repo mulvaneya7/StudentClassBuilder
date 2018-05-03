@@ -25,7 +25,7 @@ public class PersonAddress {
 
     @Override
     public String toString() {
-        return street + ", " + city + " " + state + ", " + zipcode;
+        return street + " " + city + ", " + zipcode + " " + state;
     }
 
     /*

@@ -27,8 +27,8 @@ public class Class {
     }
 
     /*
-        | Getters and Setters
-         */
+    | Getters and Setters
+     */
     public String getClassCode() {
         return classCode;
     }

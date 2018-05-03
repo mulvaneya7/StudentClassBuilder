@@ -1,5 +1,7 @@
 package PeopleAndSchool;
 
+import java.util.ArrayList;
+
 public class Person {
     //Data Fields
     private String firstName;
@@ -26,16 +28,23 @@ public class Person {
         this.address = address;
     }
 
-
     //default no-arg constructor
     public Person() {
         this("",null,"","","",new PersonAddress());
     }
 
+    //Overriding methods
+    @Override
+    public String toString() {
+        return firstName + " " + ((middleName == null ? "": middleName + " ")) + lastName + "\n"
+                + "ID: " + uniqueID  + ((schoolName == null ? "\n": "U:  " + schoolName + "\n"))
+                + "T:  " + telephone + "\n" +  "A:  " + address.toString();
+
+    }
 
     /*
-    | Getters and Setters
-     */
+        | Getters and Setters
+         */
     public String getFirstName() {
         return firstName;
     }

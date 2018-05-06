@@ -68,9 +68,30 @@ public class University implements GenerateRandomSchedule{
         }
     }
 
+    //generating functions
+    //if the class is less than 30% of its max students, session is cancelled
+    public static boolean isSessionCancelled(Class course) {
+        if(course.getStudentsInClass() >= (course.getMaxStudents()/3))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    //if there are no courses of this type scheduled its cancelled
+    public static boolean isCourseCancelled(Class course) {
+        return true;
+    }
+
+
     /*
     | Getters and Setters
      */
+
+
     public ArrayList<Student> getStudentList() {
         return studentList;
     }

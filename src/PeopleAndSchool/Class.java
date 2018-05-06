@@ -8,7 +8,6 @@ public class Class {
     private String sessionId;               //the ID of an instance of the class
     private int    maxStudents;             //max number of students in this class
     private int    studentsInClass;         //number of students currently in class
-    private boolean isCancelled = false;    //is class cancelled?
 
 
     //-------------------------------------------------------------------------//
@@ -43,9 +42,18 @@ public class Class {
         return (super.hashCode() %1000000);
     }
 
+
+    //generating functions
+
+
     /*
-            | Getters and Setters
-             */
+    | Getters and Setters
+     */
+
+    public String getSessionId() { return sessionId; }
+
+    public void setSessionId(String sessionId) { this.sessionId = sessionId; }
+
     public String getClassCode() {
         return classCode;
     }
@@ -86,11 +94,4 @@ public class Class {
         this.studentsInClass = studentsInClass;
     }
 
-    public boolean isCancelled() {
-        return isCancelled;
-    }
-
-    public void setCancelled(boolean cancelled) {
-        isCancelled = cancelled;
-    }
 }

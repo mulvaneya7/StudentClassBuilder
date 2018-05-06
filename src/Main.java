@@ -10,28 +10,30 @@ public class Main
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Connection conn = connect(); //connect to the database
+//        Connection conn = connect(); //connect to the database
+//
+//        Statement stmt = null;
+//        try
+//        {
+//            stmt = conn.createStatement();
+//            ResultSet rs = stmt.executeQuery("SELECT * FROM StudentInfo");
+//
+//            while(rs.next())
+//            {
+//                String firstName = rs.getString("FirstName");
+//
+//                System.out.println("FirstName = " + firstName);
+//            }
+//        }
+//        catch(Exception e)
+//        {
+//            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+//            System.exit(0);
+//        }
 
-        Statement stmt = null;
-        try
-        {
-            stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM StudentInfo");
-
-            while(rs.next())
-            {
-                String firstName = rs.getString("FirstName");
-
-                System.out.println("FirstName = " + firstName);
-            }
-        }
-        catch(Exception e)
-        {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            System.exit(0);
-        }
 
 
+        //Alex testing gay shit
 //        Person john = new Person("John", null , "Doe", "12256", "949-555-9090",
 //                new PersonAddress("123 Maple","RSM","California", "92688"));
 //
@@ -63,10 +65,14 @@ public class Main
             System.out.println(ex);
         }
         */
-//        File courseMockup = new File("src/CourseMockup.txt");
-//        University UCLA = new University("UCLA",courseMockup);
-//        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
-//        UCLA.printAvailableCourses();
-//        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
+        File courseMockup = new File("src/CourseMockup.txt");
+        University UCLA = new University("UCLA",courseMockup);
+        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
+        UCLA.printAvailableCourses();
+        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
+        System.out.println(UCLA.hashCode()%1000000);
+        System.out.println(UCLA.getUniversityId());
+
+
     }
 }

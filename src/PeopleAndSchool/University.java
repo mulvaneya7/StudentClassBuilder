@@ -9,6 +9,7 @@ import java.util.*;
 public class University implements GenerateRandomSchedule{
     //Data Fields
     String universityName;
+    String universityId;
     ArrayList<Student> studentList;
     ArrayList<Teacher> teacherList;
     ArrayList<Class>   classList;
@@ -18,6 +19,7 @@ public class University implements GenerateRandomSchedule{
         this.studentList = studentList;
         this.teacherList = teacherList;
         this.classList = classList;
+        this.universityId = "u" + hashCode();
     }
 
     //constructor with just a uni name, sets new Arraylists of people and classes
@@ -48,6 +50,15 @@ public class University implements GenerateRandomSchedule{
         }
     }
 
+    //Methods on CourseList
+
+
+
+    //Overriding methods
+    @Override
+    public int hashCode() {
+        return super.hashCode() % 100000;
+    }
 
     //Print Functions
     public void printAvailableCourses() {
@@ -90,5 +101,13 @@ public class University implements GenerateRandomSchedule{
 
     public void setUniversityName(String universityName) {
         this.universityName = universityName;
+    }
+
+    public String getUniversityId() {
+        return universityId;
+    }
+
+    public void setUniversityId(String universityId) {
+        this.universityId = universityId;
     }
 }

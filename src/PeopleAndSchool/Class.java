@@ -5,6 +5,7 @@ public class Class {
     private String classCode;               //code for class       ex "1A" or "1B" or "4A" or "4B"
     private String department;              //department of class  ex."CS" or "BIO"
     private String description;             //description of class ex."Introduction to Computer Science"
+    private String sessionId;               //the ID of an instance of the class
     private int    maxStudents;             //max number of students in this class
     private int    studentsInClass;         //number of students currently in class
     private boolean isCancelled = false;    //is class cancelled?
@@ -20,6 +21,8 @@ public class Class {
         this.department = department;
         this.description = description;
         this.maxStudents = maxStudents;
+        sessionId = "c" + hashCode();
+
     }
     //no-arg Constructor
     public Class() {
@@ -35,9 +38,14 @@ public class Class {
                 "about: " + description;
     }
 
+    @Override
+    public int hashCode() {
+        return (super.hashCode() %1000000);
+    }
+
     /*
-        | Getters and Setters
-         */
+            | Getters and Setters
+             */
     public String getClassCode() {
         return classCode;
     }

@@ -20,7 +20,7 @@ public class University implements GenerateRandomSchedule{
         this.classList = classList;
     }
 
-    //default no-arg constructor
+    //constructor with just a uni name, sets new Arraylists of people and classes
     public University(String uniName) {
         this(uniName, new ArrayList<Student>(),new ArrayList<Teacher>(), new ArrayList<Class>());
     }

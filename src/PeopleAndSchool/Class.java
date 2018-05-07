@@ -9,7 +9,6 @@ public class Class {
     private String description;             //description of class ex."Introduction to Computer Science"
     private String sessionId;               //the ID of an instance of the class
     private int    maxStudents;             //max number of students in this class
-    private int    studentsInClass;         //number of students currently in class
     private Teacher professor;              //who's teaching the class
     private ArrayList<Student> roster;      //who's in the class
 
@@ -25,6 +24,8 @@ public class Class {
         this.description = description;
         this.maxStudents = maxStudents;
         sessionId = "c" + hashCode();
+        professor = null;
+        roster = new ArrayList<>();
 
     }
     //no-arg Constructor
@@ -46,6 +47,14 @@ public class Class {
         return (super.hashCode() %1000000);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Class)
+            if(this.sessionId == ((Class)obj).getSessionId())
+                return true;
+
+        return false;
+    }
 
     //generating functions
 
@@ -90,12 +99,19 @@ public class Class {
         this.maxStudents = maxStudents;
     }
 
-    public int getStudentsInClass() {
-        return studentsInClass;
+    public Teacher getProfessor() {
+        return professor;
     }
 
-    public void setStudentsInClass(int studentsInClass) {
-        this.studentsInClass = studentsInClass;
+    public void setProfessor(Teacher professor) {
+        this.professor = professor;
     }
 
+    public ArrayList<Student> getRoster() {
+        return roster;
+    }
+
+    public void setRoster(ArrayList<Student> roster) {
+        this.roster = roster;
+    }
 }

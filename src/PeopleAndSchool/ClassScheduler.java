@@ -53,6 +53,23 @@ public class ClassScheduler implements GenerateRandomSchedule {
     }
 
     //Accessor methods
+    //if the class is less than 30% of its max students, session is cancelled
+    public static boolean isSessionCancelled(Class course) {
+        if(course.getRoster().size() >= (course.getMaxStudents()/3))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+//    public boolean isCourseCancelled(Class course) {
+//        for(int i = 0; i < allCourses.size(); i++) {
+//
+//        }
+//    }
 
     //Printing methods
     public void printAvailableCourses() {

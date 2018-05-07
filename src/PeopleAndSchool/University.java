@@ -46,51 +46,16 @@ public class University {
     //Print Functions
 
     //generating functions
-    //if the class is less than 30% of its max students, session is cancelled
-    public static boolean isSessionCancelled(Class course) {
-        if(course.getStudentsInClass() >= (course.getMaxStudents()/3))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    //if there are no courses of this type scheduled its cancelled
-    public static boolean isCourseCancelled(Class course) {
-        return true;
-    }
-
 
     /*
     | Getters and Setters
      */
-
-
-    public ArrayList<Student> getStudentList() {
-        return studentList;
+    public ClassScheduler getAgenda() {
+        return agenda;
     }
 
-    public void setStudentList(ArrayList<Student> studentList) {
-        this.studentList = studentList;
-    }
-
-    public ArrayList<Teacher> getTeacherList() {
-        return teacherList;
-    }
-
-    public void setTeacherList(ArrayList<Teacher> teacherList) {
-        this.teacherList = teacherList;
-    }
-
-    public ArrayList<Class> getClassList() {
-        return classList;
-    }
-
-    public void setClassList(ArrayList<Class> classList) {
-        this.classList = classList;
+    public void setAgenda(ClassScheduler agenda) {
+        this.agenda = agenda;
     }
 
     public String getUniversityName() {

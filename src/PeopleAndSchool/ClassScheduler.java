@@ -1,6 +1,7 @@
 package PeopleAndSchool;
 
 import ScheduleInterfaces.IdCreator;
+import ScheduleInterfaces.Scheduler;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,11 +9,12 @@ import java.util.Scanner;
 /**
  * Created by amulvaney0 on 5/7/2018.
  */
-public class ClassScheduler implements IdCreator {
+public class ClassScheduler implements Scheduler {
     //data field
     ArrayList<Student> studentRoster;
     ArrayList<Teacher> teacherRoster;
     ArrayList<Class>   allCourses;
+    Scheduler scheduler;
 
     //Construct the class with three lists
     public ClassScheduler(ArrayList<Student> studentRoster, ArrayList<Teacher> teacherRoster, ArrayList<Class> allCourses) {
@@ -88,6 +90,13 @@ public class ClassScheduler implements IdCreator {
         this.allCourses = allCourses;
     }
 
+    /**
+     * This method allows the input to choose how the classes want to be scheduled
+     * It can be scheduled sequentially or randomly
+     */
+    public void selectWhichSchedulerToUse(){
+
+    }
 
     @Override
     public ArrayList<java.lang.Class> scheduleClasses() {

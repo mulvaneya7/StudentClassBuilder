@@ -1,6 +1,5 @@
 package PeopleAndSchool;
 import java.io.*;
-import ScheduleInterfaces.GenerateRandomSchedule;
 import java.util.*;
 
 /**

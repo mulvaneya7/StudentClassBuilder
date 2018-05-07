@@ -1,5 +1,7 @@
 package PeopleAndSchool;
 
+import java.util.ArrayList;
+
 public class Class {
     //Data Field
     private String classCode;               //code for class       ex "1A" or "1B" or "4A" or "4B"
@@ -8,6 +10,8 @@ public class Class {
     private String sessionId;               //the ID of an instance of the class
     private int    maxStudents;             //max number of students in this class
     private int    studentsInClass;         //number of students currently in class
+    private Teacher professor;              //who's teaching the class
+    private ArrayList<Student> roster;      //who's in the class
 
 
     //-------------------------------------------------------------------------//

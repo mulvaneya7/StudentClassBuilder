@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53df2982-38db-4ca8-839e-b80bef9d9644" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PeopleAndSchool/Class.java" afterPath="$PROJECT_DIR$/src/PeopleAndSchool/Class.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PeopleAndSchool/University.java" afterPath="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +53,8 @@
       <file leaf-file-name="University.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/University.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -76,18 +74,44 @@
         <entry file="file://$PROJECT_DIR$/src/StudentInputFile.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenerateRandomSchedule.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenerateRandomSchedule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScheduleInterfaces/GenerateRandomSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassScheduler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/ClassScheduler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#2015#2016#0" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
+                <element signature="e#2121#2122#0" expanded="true" />
+                <element signature="e#2171#2172#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2259#2260#0" expanded="true" />
+                <element signature="e#2329#2330#0" expanded="true" />
+                <element signature="e#2379#2380#0" expanded="true" />
+                <element signature="e#2426#2427#0" expanded="true" />
+                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
+                <element signature="e#2565#2566#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,29 +154,6 @@
                 <marker date="1525724714177" expanded="false" signature="1240:1246" ph=" }" />
                 <marker date="1525724714177" expanded="false" signature="1290:1301" ph=" { " />
                 <marker date="1525724714177" expanded="false" signature="1324:1330" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#1634#1635#0" expanded="false" />
-                <element signature="e#1674#1675#0" expanded="false" />
-                <element signature="e#1711#1712#0" expanded="false" />
-                <element signature="e#1744#1745#0" expanded="false" />
-                <element signature="e#1796#1797#0" expanded="false" />
-                <element signature="e#1840#1841#0" expanded="false" />
-                <marker date="1525724714177" expanded="false" signature="1395:1406" ph=" { " />
-                <marker date="1525724714177" expanded="false" signature="1423:1429" ph=" }" />
-                <marker date="1525724714177" expanded="false" signature="1477:1488" ph=" { " />
-                <marker date="1525724714177" expanded="false" signature="1515:1521" ph=" }" />
-                <marker date="1525724714177" expanded="false" signature="1554:1565" ph=" { " />
-                <marker date="1525724714177" expanded="false" signature="1581:1587" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -245,15 +246,16 @@
         <option value="$PROJECT_DIR$/src/PeopleAndSchool/PersonAddress.java" />
         <option value="$PROJECT_DIR$/src/PeopleAndSchool/Person.java" />
         <option value="$PROJECT_DIR$/src/PeopleAndSchool/Student.java" />
-        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
-        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
-        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
         <option value="$PROJECT_DIR$/src/PeopleAndSchool/Class.java" />
         <option value="$PROJECT_DIR$/src/PeopleAndSchool/Class.java" />
         <option value="$PROJECT_DIR$/src/ScheduleInterfaces/GenerateRandomSchedule.java" />
+        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
+        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
+        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
+        <option value="$PROJECT_DIR$/src/PeopleAndSchool/University.java" />
+        <option value="$PROJECT_DIR$/src/PeopleAndSchool/ClassScheduler.java" />
       </list>
     </option>
   </component>
@@ -330,6 +332,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ScheduleInterfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentClassBuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentClassBuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PeopleAndSchool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,12 +794,12 @@
       <workItem from="1525290426993" duration="1438000" />
       <workItem from="1525292961571" duration="1436000" />
       <workItem from="1525294823445" duration="2107000" />
-      <workItem from="1525724757710" duration="265000" />
+      <workItem from="1525724757710" duration="1435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5246000" />
+    <option name="totallyTimeSpent" value="6416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -837,28 +857,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#1434#1435#0" expanded="false" />
-            <element signature="e#1476#1477#0" expanded="false" />
-            <element signature="e#1506#1507#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1570#1571#0" expanded="false" />
-            <element signature="e#1600#1601#0" expanded="false" />
-            <marker date="1525724714177" expanded="true" signature="1146:1153" ph="{...}" />
-            <marker date="1525724714177" expanded="false" signature="1187:1198" ph=" { " />
-            <marker date="1525724714177" expanded="false" signature="1217:1223" ph=" }" />
-            <marker date="1525724714177" expanded="false" signature="1273:1284" ph=" { " />
-            <marker date="1525724714177" expanded="false" signature="1315:1321" ph=" }" />
-            <marker date="1525724714177" expanded="false" signature="1353:1364" ph=" { " />
-            <marker date="1525724714177" expanded="false" signature="1381:1387" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1442,14 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StudentInputFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1461,19 +1451,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleInterfaces/GenerateRandomSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentInputFile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PeopleAndSchool/ClassScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2121#2122#0" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2259#2260#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+            <element signature="e#2379#2380#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

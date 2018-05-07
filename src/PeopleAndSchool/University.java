@@ -1,24 +1,22 @@
 package PeopleAndSchool;
 import java.io.*;
-import ScheduleInterfaces.GenerateRandomSchedule;
 import java.util.*;
 
 /**
  * Created by amulvaney0 on 5/2/2018.
  */
-public class University implements GenerateRandomSchedule{
+public class University {
     //Data Fields
-    String universityName;
-    String universityId;
-    ArrayList<Student> studentList;
-    ArrayList<Teacher> teacherList;
-    ArrayList<Class>   classList;
+    String universityName;      //name of college
+    String universityId;        //unique ID for this college
+    ClassScheduler agenda;      //this class hold the roster for teachers, students, and available classes
+
 
     public University(String uniName, ArrayList<Student> studentList, ArrayList<Teacher> teacherList, ArrayList<Class> classList) {
         this.universityName = uniName;
-        this.studentList = studentList;
-        this.teacherList = teacherList;
-        this.classList = classList;
+        this.agenda.setStudentRoster(studentList);
+        this.agenda.setTeacherRoster(teacherList);
+        this.agenda.setAllCourses(classList);
         this.universityId = "u" + hashCode();
     }
 
@@ -30,25 +28,9 @@ public class University implements GenerateRandomSchedule{
     //load the University Class list on Construction
     public University(String uniName, File Courses) {
         this(uniName);
-        loadClasses(Courses);
+        this.agenda.loadClasses(Courses);
     }
 
-    //load University classes via Text file
-    private void loadClasses(java.io.File inputFile) {
-        try(Scanner input = new Scanner(inputFile)) {
-            while(input.hasNext()) {
-                classList.add(new Class(input.nextLine(),
-                                        input.nextLine(),
-                                        input.nextLine(),
-                                        input.nextInt())
-                                        );
-                if(input.hasNext())
-                    input.next();
-            }
-        }catch(Exception ex) {
-            System.out.println(ex);
-        }
-    }
 
     //Methods on CourseList
 
@@ -61,12 +43,6 @@ public class University implements GenerateRandomSchedule{
     }
 
     //Print Functions
-    public void printAvailableCourses() {
-        for(int i = 0; i < classList.size(); i++) {
-            System.out.println(classList.get(i).toString());
-            System.out.println();
-        }
-    }
 
     //generating functions
     //if the class is less than 30% of its max students, session is cancelled

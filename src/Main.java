@@ -57,6 +57,7 @@ public class Main
                 output.println(i);
                 output.println("Description");
                 output.println(20);
+                output.println();
             }
         }
         catch(Exception ex) {
@@ -66,7 +67,7 @@ public class Main
         File courseMockup = new File("src/CourseMockup.txt");
         University saddleback = new University("Saddleback",courseMockup);
         saddleback.getAgenda().printAvailableCourses();
-        //System.out.println(saddleback.getAgenda().getAllCourses().get(4).getDepartment());
+        System.out.println(saddleback.getAgenda().getAllCourses().get(4));
 
 
     }

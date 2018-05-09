@@ -4,6 +4,7 @@ import ScheduleInterfaces.*;
 import ScheduleInterfaces.Scheduler;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -39,15 +40,14 @@ public class ClassScheduler implements Scheduler {
     //load ClassScheduler classes via Text file
     protected void loadClasses(java.io.File inputFile) {
         try(Scanner input = new Scanner(inputFile)) {
-            while(input.hasNext()) {
-                allCourses.add(new Class(input.nextLine(),
-                        input.nextLine(),
-                        input.nextLine(),
-                        input.nextInt())
-                );
-                if(input.hasNext())
-                    input.next();
+            while (input.hasNextLine()) {
+                allCourses.add(new Class(input.next(),
+                                         input.next(),
+                                         input.next(),
+                                         input.nextInt()));
             }
+        }catch(InputMismatchException x) {
+            System.out.println(x);
         }catch(Exception ex) {
             System.out.println(ex);
         }

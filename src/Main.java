@@ -46,26 +46,27 @@ public class Main
 
 
         //CLASS TEXT FILE GENERATOR
-        /*
+
         try(PrintWriter output = new PrintWriter("src/CourseMockup.txt")) {
 
             for(int i = 0; i < 50; i++) {
                 if(i%2==0)
-                    output.println("A");
+                    output.println("AB");
                 else
-                    output.println("B");
+                    output.println("CS");
                 output.println(i);
                 output.println("Description");
                 output.println(20);
-                output.println();
             }
         }
         catch(Exception ex) {
             System.out.println(ex);
         }
-        */
+
         File courseMockup = new File("src/CourseMockup.txt");
         University saddleback = new University("Saddleback",courseMockup);
+        saddleback.getAgenda().printAvailableCourses();
+        //System.out.println(saddleback.getAgenda().getAllCourses().get(4).getDepartment());
 
 
     }

@@ -1,5 +1,6 @@
 package PeopleAndSchool;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import ScheduleInterfaces.*;
@@ -14,21 +15,28 @@ public class Student extends Person implements Scheduler{
 
     public Student()
     {
-        this("","","","","",new PersonAddress(), new Date(), new Date(), -0.1);
+        this("","","","",new PersonAddress(), new Date(), new Date(), -0.1);
     }
 
-    public Student(String firstName, String middleName, String lastName, String uniqueID, String telephone, PersonAddress address, Date dateOfBirth, Date startDate, double gpa) {
-        super(firstName, middleName, lastName, uniqueID, telephone, address);
+    public Student(String firstName, String middleName, String lastName, String telephone, PersonAddress address, Date dateOfBirth, Date startDate, double gpa) {
+        super(firstName, middleName, lastName, telephone, address);
         this.dateOfBirth = dateOfBirth;
         this.startDate = startDate;
         this.gpa = gpa;
+        this.setUniqueID("s" + this.hashCode());
     }
 
     //Overriding methods
     @Override
     public String toString() {
-        return  super.toString() + "\n" + "GPA: " + ((super.getSchoolName() == null ? 0.0: gpa)) + "\n" + "Birth:    " + dateOfBirth.toString() + "\n"
-                + "Enrolled: " + startDate.toString();
+        return  super.toString() + "\n" + "GPA: " + ((super.getSchoolName() == null ? 0.0: gpa)) + "\n" +
+                 "Birth:    "  + super.printDate(dateOfBirth) + "\n"
+                + "Enrolled: " + super.printDate(startDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return (super.hashCode() % 100000);
     }
 
     public Date getDateOfBirth() {
@@ -59,4 +67,5 @@ public class Student extends Person implements Scheduler{
     public ArrayList<java.lang.Class> scheduleClasses() {
         return null;
     }
+
 }

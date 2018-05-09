@@ -12,11 +12,14 @@ import java.util.Scanner;
  */
 public class ClassScheduler implements Scheduler {
     //data field
-    ArrayList<Student> studentRoster;
-    ArrayList<Teacher> teacherRoster;
-    ArrayList<Class>   allCourses;
+    private ArrayList<Student> studentRoster;
+    private ArrayList<Teacher> teacherRoster;
+    private ArrayList<Class>   allCourses;
     Scheduler scheduler;
 
+    /*
+    Constructors
+     */
     //Construct the class with three lists
     public ClassScheduler(ArrayList<Student> studentRoster, ArrayList<Teacher> teacherRoster, ArrayList<Class> allCourses) {
         this.studentRoster = studentRoster;
@@ -35,7 +38,9 @@ public class ClassScheduler implements Scheduler {
     }
 
 
-    //Mutator methods
+    /*
+    Mutator methods
+     */
 
     //load ClassScheduler classes via Text file
     protected void loadClasses(java.io.File inputFile) {
@@ -53,9 +58,12 @@ public class ClassScheduler implements Scheduler {
         }
     }
 
-    //Accessor methods
+
+    /*
+    Accessor methods
+     */
     //if the class is less than 30% of its max students, session is cancelled
-    public static boolean isSessionCancelled(Class course) {
+    public boolean isSessionCancelled(Class course) {
         if(course.getRoster().size() >= (course.getMaxStudents()/3))
         {
             return true;
@@ -80,6 +88,16 @@ public class ClassScheduler implements Scheduler {
         }
     }
 
+    //Mutator functions
+    public void addStudent(Student s) {
+        if(s instanceof Student) {
+            studentRoster.add(s);
+        }
+    }
+
+    public void addTeacher(Teacher t) {
+        teacherRoster.add(t);
+    }
     /*
     Getters and Setters
      */

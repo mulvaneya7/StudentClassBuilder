@@ -32,10 +32,21 @@ public class University {
         this.agenda.loadClasses(Courses);
     }
 
+    /*
+    Mutator functions
+     */
 
-    //Methods on CourseList
+    //Overloaded functions when adding Students or Faculty
+    //use these functions when adding students or teachers to their respective lists
+    public void enroll(Student s) {
+        if(s != null)
+        agenda.addStudent(s);
+    }
 
-
+    public void enroll(Teacher t) {
+        if(t != null)
+        agenda.addTeacher(t);
+    }
 
     //Overriding methods
     @Override
@@ -43,9 +54,6 @@ public class University {
         return super.hashCode() % 100000;
     }
 
-    //Print Functions
-
-    //generating functions
 
     /*
     | Getters and Setters

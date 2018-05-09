@@ -33,12 +33,12 @@ public class Main
 
 
         //Alex testing gay shit
-//        Person john = new Person("John", null , "Doe", "12256", "949-555-9090",
-//                new PersonAddress("123 Maple","RSM","California", "92688"));
-//
-//        Student studentJohn = new Student("John", "Malerd" , "Doe", "12256", "949-555-9090",
-//                new PersonAddress("123 Maple","RSM","California", "92688"),
-//                new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
+        Person john = new Person("John", null , "Doe", "949-555-9090",
+                new PersonAddress("123 Maple","RSM","California", "92688"));
+
+        Student studentJohn = new Student("John", "Malerd" , "Doe", "949-555-9090",
+                new PersonAddress("123 Maple","RSM","California", "92688"),
+                new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
 //
 //        System.out.println(john.toString());
 //        System.out.println();
@@ -68,6 +68,11 @@ public class Main
         University saddleback = new University("Saddleback",courseMockup);
         saddleback.getAgenda().printAvailableCourses();
         System.out.println(saddleback.getAgenda().getAllCourses().get(4));
+        //System.out.println(saddleback.getUniversityId());
+
+        System.out.println();
+        saddleback.enroll(studentJohn);
+        System.out.println(saddleback.getAgenda().getStudentRoster().get(0).toString());
 
 
     }

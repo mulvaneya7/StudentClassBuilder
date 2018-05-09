@@ -14,6 +14,7 @@ public class University {
 
     public University(String uniName, ArrayList<Student> studentList, ArrayList<Teacher> teacherList, ArrayList<Class> classList) {
         this.universityName = uniName;
+        this.agenda = new ClassScheduler();
         this.agenda.setStudentRoster(studentList);
         this.agenda.setTeacherRoster(teacherList);
         this.agenda.setAllCourses(classList);

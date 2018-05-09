@@ -1,9 +1,10 @@
 package PeopleAndSchool;
-import ScheduleInterfaces.*;
+
 import java.util.ArrayList;
 import java.util.Date;
+import ScheduleInterfaces.*;
 
-public class Student extends Person implements GenerateRandomSchedule{
+public class Student extends Person implements Scheduler{
 
     //Data Fields
     private java.util.Date dateOfBirth;
@@ -52,5 +53,10 @@ public class Student extends Person implements GenerateRandomSchedule{
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+
+    @Override
+    public ArrayList<java.lang.Class> scheduleClasses() {
+        return null;
     }
 }

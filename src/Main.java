@@ -1,9 +1,8 @@
-import PeopleAndSchool.*;
+
 import static DatabaseClasses.SQLiteJDBCDriverConnection.*;
+import PeopleAndSchool.*;
 import java.io.*;
-import java.lang.Class;
-import java.sql.*;
-import java.util.Date;
+
 public class Main
 {
     /**
@@ -66,12 +65,7 @@ public class Main
         }
         */
         File courseMockup = new File("src/CourseMockup.txt");
-        University UCLA = new University("UCLA",courseMockup);
-        System.out.println("\ncourses for University " + UCLA.getUniversityName() +": ");
-        UCLA.printAvailableCourses();
-        System.out.println(UCLA.getClassList().get(5).getDepartment() + ":" + UCLA.getClassList().get(5).getMaxStudents());
-        System.out.println(UCLA.hashCode()%1000000);
-        System.out.println(UCLA.getUniversityId());
+        University saddleback = new University("Saddleback",courseMockup);
 
 
     }

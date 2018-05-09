@@ -1,6 +1,6 @@
 package PeopleAndSchool;
 
-import ScheduleInterfaces.IdCreator;
+import ScheduleInterfaces.*;
 import ScheduleInterfaces.Scheduler;
 
 import java.util.ArrayList;

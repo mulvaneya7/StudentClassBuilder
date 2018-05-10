@@ -39,6 +39,8 @@ public class Main
         Student studentJohn = new Student("John", "Malerd" , "Doe", "949-555-9090",
                 new PersonAddress("123 Maple","RSM","California", "92688"),
                 new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
+
+        PeopleAndSchool.Class oom = new PeopleAndSchool.Class("AB","2","Description",20);
 //
 //        System.out.println(john.toString());
 //        System.out.println();
@@ -46,7 +48,7 @@ public class Main
 
 
         //CLASS TEXT FILE GENERATOR
-
+        /*
         try(PrintWriter output = new PrintWriter("src/CourseMockup.txt")) {
 
             for(int i = 0; i < 50; i++) {
@@ -63,6 +65,7 @@ public class Main
         catch(Exception ex) {
             System.out.println(ex);
         }
+        */
 
         File courseMockup = new File("src/CourseMockup.txt");
         University saddleback = new University("Saddleback",courseMockup);
@@ -73,6 +76,7 @@ public class Main
         System.out.println();
         saddleback.enroll(studentJohn);
         System.out.println(saddleback.getAgenda().getStudentRoster().get(0).toString());
+        System.out.println(saddleback.getAgenda().amountOfSessions(oom));
 
 
     }

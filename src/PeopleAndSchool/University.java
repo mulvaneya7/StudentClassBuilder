@@ -48,6 +48,21 @@ public class University {
         agenda.addTeacher(t);
     }
 
+    /*
+    Accessor Methods
+     */
+    public int getTotalStudents() {
+        return agenda.getStudentRoster().size();
+    }
+
+    public int getTotalFaculty() {
+        return agenda.getTeacherRoster().size();
+    }
+
+    public int getTotalAvailableClasses() {
+        return agenda.getAllCourses().size();
+    }
+
     //Overriding methods
     @Override
     public int hashCode() {

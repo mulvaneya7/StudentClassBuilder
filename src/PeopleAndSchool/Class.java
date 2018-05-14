@@ -28,10 +28,10 @@ public class Class {
 
     /**
      * Class Constructor
-     * @param department
-     * @param classCode
-     * @param description
-     * @param maxStudents
+     * @param department the department the course is under (ex: Math, Science, CS)
+     * @param classCode unique code for each class
+     * @param description description of each course
+     * @param maxStudents max amount of students allowed in each class
      */
     public Class(String department, String classCode, String description, int maxStudents) {
         this.classCode = classCode;
@@ -76,11 +76,6 @@ public class Class {
 
         return false;
     }
-
-    /**
-     * Generating functions
-     * @return
-     */
 
 
     /*

@@ -44,6 +44,7 @@ public class ClassScheduler implements Scheduler {
      * Default No Arg Constructor Class
      */
     public ClassScheduler() {
+
         this(new ArrayList<Student>(), new ArrayList<Teacher>(), new ArrayList<Class>());
     }
 
@@ -205,9 +206,5 @@ public class ClassScheduler implements Scheduler {
         return null;
     }
 
-    /**
-     * Overrride method that schedules the classes sequentially or randomly
-     * @return
-     */
 
 }

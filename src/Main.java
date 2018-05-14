@@ -1,7 +1,10 @@
 
 import static DatabaseClasses.SQLiteJDBCDriverConnection.*;
 import PeopleAndSchool.*;
+import PeopleAndSchool.Class;
+
 import java.io.*;
+import java.util.Date;
 
 public class Main
 {
@@ -38,9 +41,9 @@ public class Main
 
         Student studentJohn = new Student("John", "Malerd" , "Doe", "949-555-9090",
                 new PersonAddress("123 Maple","RSM","California", "92688"),
-                new java.util.Date(1995,10,1), new java.util.Date(2018,1,1), 3.5);
+                new Date(1995,10,1), new Date(2018,1,1), 3.5);
 
-        PeopleAndSchool.Class oom = new PeopleAndSchool.Class("AB","2","Description",20);
+        Class oom = new Class("AB","2","Description",20);
 //
 //        System.out.println(john.toString());
 //        System.out.println();
@@ -78,6 +81,8 @@ public class Main
         System.out.println(saddleback.getAgenda().getStudentRoster().get(0).toString());
         System.out.println(saddleback.getAgenda().amountOfSessions(oom));
 
-
+        ClassScheduler selectSchedule = new ClassScheduler();
+        int choice = 0;
+        selectSchedule.selectWhichSchedulerToUse(choice);
     }
 }

@@ -63,9 +63,9 @@ public class Student extends Person implements Scheduler{
         this.gpa = gpa;
     }
 
+
     @Override
-    public ArrayList<java.lang.Class> scheduleClasses() {
+    public String scheduleClasses(ArrayList<String> studentRoster, ArrayList<String> teacherRoster, ArrayList<String> sessionId) {
         return null;
     }
-
 }

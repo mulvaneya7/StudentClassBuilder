@@ -55,12 +55,6 @@ public class University {
         agenda.addTeacher(t);
     }
 
-<<<<<<< HEAD
-    /**
-     * Override hashCode method
-     * @return unique hashCode ID
-     */
-=======
     /*
     Accessor Methods
      */

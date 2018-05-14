@@ -10,7 +10,10 @@ public class GenerateSequentialSchedule implements Scheduler{
 
 
     @Override
-    public ArrayList<Class> scheduleClasses() {
+    public String scheduleClasses(ArrayList<String> studentRoster, ArrayList<String> teacherRoster, ArrayList<String> sessionId) {
+        for(String students : studentRoster){
+
+        }
         return null;
     }
 }

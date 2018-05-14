@@ -1,5 +1,6 @@
 package ScheduleInterfaces;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -7,5 +8,5 @@ import java.util.ArrayList;
  * Created by emarin5 on 5/7/2018.
  */
 public interface Scheduler {
-    public ArrayList<Class> scheduleClasses();
+    public String scheduleClasses(ArrayList <String> studentRoster, ArrayList<String> teacherRoster, ArrayList <String> sessionId);
 }

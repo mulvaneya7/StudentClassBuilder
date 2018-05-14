@@ -3,7 +3,18 @@ package PeopleAndSchool;
 import java.util.ArrayList;
 
 public class Class {
-    //Data Field
+    /**
+     * Data fields
+     *
+     * @classCode The code for each class (ex: "1A", "1B", "4A", "4B")
+     * @department department of the class (ex: "CS", "BIO", "MATH")
+     * @description description of the class (ex: "Intro to Computer Science")
+     * @sessionId ID of an instance of the class
+     * @maxStudents max number of students in the class
+     * @professor the Teacher of each class
+     * @roster roster of the students in the class
+     *
+     */
     private String classCode;               //code for class       ex "1A" or "1B" or "4A" or "4B"
     private String department;              //department of class  ex."CS" or "BIO"
     private String description;             //description of class ex."Introduction to Computer Science"
@@ -14,10 +25,14 @@ public class Class {
 
 
     //-------------------------------------------------------------------------//
-    /*
-        Constructors
+
+    /**
+     * Class Constructor
+     * @param department
+     * @param classCode
+     * @param description
+     * @param maxStudents
      */
-    //Best Constructor
     public Class(String department, String classCode, String description, int maxStudents) {
         this.classCode = classCode;
         this.department = department;
@@ -28,12 +43,18 @@ public class Class {
         roster = new ArrayList<>();
 
     }
-    //no-arg Constructor
+
+    /**
+     * No Arg Constructor
+     */
     public Class() {
         this(null,null,"",0);
     }
 
-    //overriding methods
+    /**
+     * Override toString and hashCode methods
+     * @return String
+     */
 
     @Override
     public String toString() {
@@ -56,11 +77,14 @@ public class Class {
         return false;
     }
 
-    //generating functions
+    /**
+     * Generating functions
+     * @return
+     */
 
 
     /*
-    | Getters and Setters
+    | Getters and Setter methods
      */
 
     public String getSessionId() { return sessionId; }

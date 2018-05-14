@@ -26,14 +26,21 @@ public class University {
         this(uniName, new ArrayList<Student>(),new ArrayList<Teacher>(), new ArrayList<Class>());
     }
 
-    //load the University Class list on Construction
+    /**
+     * University constructor class
+     * @param uniName String name of the University
+     * @param Courses File object that holds all the University info (students, teachers, classes)
+     */
     public University(String uniName, File Courses) {
         this(uniName);
         this.agenda.loadClasses(Courses);
     }
 
-    /*
-    Mutator functions
+    /**
+     * Mutator Classes
+     * @param s inputs Student or Teacher object and checks to see if the student is enrolled
+     * If the student is enrolled, they are added to the course
+     * If the Teacher is enrolled, the teacher is added to the course schedule
      */
 
     //Overloaded functions when adding Students or Faculty
@@ -48,7 +55,10 @@ public class University {
         agenda.addTeacher(t);
     }
 
-    //Overriding methods
+    /**
+     * Override hashCode method
+     * @return unique hashCode ID
+     */
     @Override
     public int hashCode() {
         return super.hashCode() % 100000;

@@ -3,6 +3,7 @@ package PeopleAndSchool;
 import ScheduleInterfaces.*;
 import ScheduleInterfaces.Scheduler;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -17,32 +18,40 @@ public class ClassScheduler implements Scheduler {
     private ArrayList<Class>   allCourses;
     Scheduler scheduler;
 
-    /*
-    Constructors
+    /**
+     * Constructor Class
+     * Takes in 3 Array Lists
+     * @param studentRoster Array List that contains the list of students
+     * @param teacherRoster Array List that contains the list of teachers
+     * @param allCourses Array List that contains all the courses in the school
      */
-    //Construct the class with three lists
     public ClassScheduler(ArrayList<Student> studentRoster, ArrayList<Teacher> teacherRoster, ArrayList<Class> allCourses) {
         this.studentRoster = studentRoster;
         this.teacherRoster = teacherRoster;
         this.allCourses = allCourses;
     }
 
-    //Construct the class with just teachers and students
+    /**
+     * Constructor class
+     * @param studentRoster
+     * @param teacherRoster
+     */
     public ClassScheduler(ArrayList<Student> studentRoster, ArrayList<Teacher> teacherRoster) {
         this(studentRoster, teacherRoster, new ArrayList<Class>());
     }
 
-    //default no-arg
+    /**
+     * Default No Arg Constructor Class
+     */
     public ClassScheduler() {
         this(new ArrayList<Student>(), new ArrayList<Teacher>(), new ArrayList<Class>());
     }
 
 
-    /*
-    Mutator methods
+    /**
+     * This method loads ClassScheduler classes via Text file
+     * @param inputFile the text file that contains ClassScheduler
      */
-
-    //load ClassScheduler classes via Text file
     protected void loadClasses(java.io.File inputFile) {
         try(Scanner input = new Scanner(inputFile)) {
             while (input.hasNextLine()) {
@@ -59,10 +68,12 @@ public class ClassScheduler implements Scheduler {
     }
 
 
-    /*
-    Accessor methods
+    /**
+     * Accessor Methods
+     * If the class is less than 30% of its max students, the session is cancelled
+     * @param course references to a specific course
+     * @return true if there aren't enough students in a class and the session is cancelled
      */
-    //if the class is less than 30% of its max students, session is cancelled
     public boolean isSessionCancelled(Class course) {
         if(course.getRoster().size() >= (course.getMaxStudents()/3))
         {
@@ -80,7 +91,9 @@ public class ClassScheduler implements Scheduler {
 //        }
 //    }
 
-    //Printing methods
+    /**
+     * This method prints all the available courses
+     */
     public void printAvailableCourses() {
         for(int i = 0; i < allCourses.size(); i++) {
             System.out.println(allCourses.get(i).toString());
@@ -88,18 +101,27 @@ public class ClassScheduler implements Scheduler {
         }
     }
 
-    //Mutator functions
+    /**
+     * Mutator Functions
+     * @param s takes in a Student object and adds the student to studentRoster
+     */
     public void addStudent(Student s) {
         if(s instanceof Student) {
             studentRoster.add(s);
         }
     }
 
+    /**
+     * This Method adds a Teacher to the teacherRoster
+     * @param t
+     */
     public void addTeacher(Teacher t) {
         teacherRoster.add(t);
     }
-    /*
-    Getters and Setters
+
+    /**
+     * Getter and Setter methods
+     * @return the instance variables
      */
     public ArrayList<Student> getStudentRoster() {
         return studentRoster;
@@ -128,14 +150,30 @@ public class ClassScheduler implements Scheduler {
     /**
      * This method allows the input to choose how the classes want to be scheduled
      * It can be scheduled sequentially or randomly
+     * If the input choice is 0, it will be scheduled randomly.
+     * If the input choice is any number greater than 0, it will schedule sequentially.
      */
-    public void selectWhichSchedulerToUse(){
-
+    public void selectWhichSchedulerToUse(int choice){
+        if(choice < 0){
+            System.out.println("Choice must be a number 0 or greater");
+        }
+        if(choice == 0){
+            scheduler = new GenerateRandomSchedule();
+        }
+        else{
+            scheduler = new GenerateSequentialSchedule();
+        }
 
     }
 
     @Override
-    public ArrayList<java.lang.Class> scheduleClasses() {
+    public String scheduleClasses(ArrayList<String> students, ArrayList<String> faculty, ArrayList<String> sessionId) {
         return null;
     }
+
+    /**
+     * Overrride method that schedules the classes sequentially or randomly
+     * @return
+     */
+
 }

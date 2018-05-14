@@ -1,6 +1,7 @@
 package ScheduleInterfaces;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * This class schedules classes in a random order.
@@ -8,8 +9,10 @@ import java.util.ArrayList;
  */
 public class GenerateRandomSchedule implements Scheduler {
 
+    Random random = new Random();
+
     @Override
-    public ArrayList<Class> scheduleClasses() {
+    public String scheduleClasses(ArrayList<String> studentRoster, ArrayList<String> teacherRoster, ArrayList<String> sessionId) {
 
         return null;
     }

@@ -55,10 +55,28 @@ public class University {
         agenda.addTeacher(t);
     }
 
+<<<<<<< HEAD
     /**
      * Override hashCode method
      * @return unique hashCode ID
      */
+=======
+    /*
+    Accessor Methods
+     */
+    public int getTotalStudents() {
+        return agenda.getStudentRoster().size();
+    }
+
+    public int getTotalFaculty() {
+        return agenda.getTeacherRoster().size();
+    }
+
+    public int getTotalAvailableClasses() {
+        return agenda.getAllCourses().size();
+    }
+
+    //Overriding methods
     @Override
     public int hashCode() {
         return super.hashCode() % 100000;

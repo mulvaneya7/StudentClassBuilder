@@ -75,7 +75,7 @@ public class ClassScheduler implements Scheduler {
      * @return true if there aren't enough students in a class and the session is cancelled
      */
     public boolean isSessionCancelled(Class course) {
-        if(course.getRoster().size() >= (course.getMaxStudents()/3))
+        if(courseExists(course) && course.getRoster().size() >= (course.getMaxStudents()/3))
         {
             return true;
         }
@@ -85,10 +85,44 @@ public class ClassScheduler implements Scheduler {
         }
     }
 
-//    public boolean isCourseCancelled(Class course) {
-//        for(int i = 0; i < allCourses.size(); i++) {
-//
-//        }
+    public boolean isCourseCancelled(Class course) {
+        int count = 0;
+        for(int i = 0; i < allCourses.size(); i++) {
+            if(allCourses.get(i).getDepartment().equals(course.getDepartment()) &&
+                    allCourses.get(i).getClassCode().equals(course.getClassCode())) {
+                if(isSessionCancelled(allCourses.get(i)) == true)
+                    count++;
+            }
+        }
+        if(count == amountOfSessions(course))
+            return true;
+        else
+            return false;
+    }
+
+    public int amountOfSessions(Class course) {
+        int count = 0;
+        for (int i = 0; i < allCourses.size(); i++) {
+            if (allCourses.get(i).getDepartment().equals(course.getDepartment()) &&
+                    allCourses.get(i).getClassCode().equals(course.getClassCode())) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public boolean courseExists(Class course) {
+        for (int i = 0; i < allCourses.size(); i++) {
+            if (allCourses.get(i).getDepartment().equals(course.getDepartment()) &&
+                    allCourses.get(i).getClassCode().equals(course.getClassCode())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+//    public int getUnscheduledCourses() {
+//        for(int i )
 //    }
 
     /**
